@@ -48,20 +48,37 @@ a {
       @include display-flex;
       justify-content: space-between;
       @include flex-direction(column);    // スキルボックスを縦に並べる
-    }//.container
+  }//.container
   h2 {
-      color: $baseColor;
-      margin-bottom: 60px;
-    }//h2
+      color: $fontColor;
+      margin-top: 60px;
+      font-weight:bold;
+  }//h2
+  h3{font-weight:bold;
+  }
   .species-box {
       @include flex(1);
-      margin: 10px 0;                     // 上下にマージン
+      margin: 10px;                     // 上下にマージン
       padding: 20px;
-      background-color: $baseColor;
+      background-color: $subColor;
       @include border-radius(4px);
       @include box-sizing(border-box);
-    }//species-box
+  }//species-box
   }//#species  
+  
+  .button-readmore {
+          margin: auto;
+          margin-bottom:10px;
+          text-align: center;
+          padding: 5px 0;
+          width: 180px;
+          display: block;
+          color: #FFF;
+          font-weight: bold;
+          background-color: $keyColor;
+          @include border-radius(4px);
+          font-size: 1rem;
+        }
   
   @media (min-width: 769px){
       #species{

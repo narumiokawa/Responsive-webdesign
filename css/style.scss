@@ -1,0 +1,73 @@
+@import"compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+$baseColor: #fdfcf6;
+$subColor: #bea300;
+$keyColor: #14c0c9;
+$fontColor: #4c4c4c;
+
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em; 
+  background-color: $baseColor;
+}
+
+a {
+  @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
+  text-decoration: none;
+}
+
+.box{
+    background-image:url('../images/neko-cute.jpg');
+    height:500px;
+    width:100%;
+    background-size:cover;
+    background-position:center center;
+}
+@media (max-width:768px){
+    .box{
+        height:250px;
+    }
+}
+
+
+  
+.text-center {
+  text-align: center;
+}
+
+#species{background-color:subColor;
+
+  .container {
+      @include display-flex;
+      justify-content: space-between;
+      @include flex-direction(column);    // スキルボックスを縦に並べる
+    }//.container
+  h2 {
+      color: $baseColor;
+      margin-bottom: 60px;
+    }//h2
+  .species-box {
+      @include flex(1);
+      margin: 10px 0;                     // 上下にマージン
+      padding: 20px;
+      background-color: $baseColor;
+      @include border-radius(4px);
+      @include box-sizing(border-box);
+    }//species-box
+  }//#species  
+  
+  @media (min-width: 769px){
+      #species{
+          .container{
+              @include flex-direction(row);
+              justify-content:space-between;
+                      } // .container
+    } // #species
+  } // @media (min-width: 768px)

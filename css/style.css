@@ -1,0 +1,67 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+html {
+  font-size: 62.5%; }
+
+body {
+  color: #4c4c4c;
+  font-size: 1.4rem;
+  font-family: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: #fdfcf6; }
+
+a {
+  color: #14c0c9;
+  text-decoration: none; }
+  a:visited {
+    color: #0f949b; }
+  a:hover {
+    color: #0f949b; }
+  a:active {
+    color: #16d6e0; }
+
+.box {
+  background-image: url("../images/neko-cute.jpg");
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center; }
+
+@media (max-width: 768px) {
+  .box {
+    height: 250px; } }
+.text-center {
+  text-align: center; }
+
+.container {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+
+h2 {
+  color: #fdfcf6;
+  margin-bottom: 60px; }
+
+.species-box {
+  -webkit-flex: 1;
+  flex: 1;
+  margin: 10px 0;
+  padding: 20px;
+  background-color: #fdfcf6;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@media (min-width: 768px) {
+  #species .container {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between; } }
+
+/*# sourceMappingURL=style.css.map */
